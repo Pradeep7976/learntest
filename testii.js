@@ -46,28 +46,28 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.post("/regesterr", async (req, res) => {
-  const saltRounds = 10;
-  const username = req.body.username;
-  const password = req.body.password;
-  const passwordHash = await bcrypt.hash(password, saltRounds);
+// app.post("/regesterr", async (req, res) => {
+//   const saltRounds = 10;
+//   const username = req.body.username;
+//   const password = req.body.password;
+//   const passwordHash = await bcrypt.hash(password, saltRounds);
 
-  const Users = await Recep.find({ username });
-  if (Users.length == 0) {
-    console.log("Not found biro");
-    console.log("Request received");
-    const Recep1 = new Recep({
-      username: username,
-      password: passwordHash,
-    });
-    console.log(Recep1);
-    const User = Recep.find({ username });
-    Recep1.save();
-    res.send(Recep1);
-  } else {
-    res.send(true);
-  }
-});
+//   const Users = await Recep.find({ username });
+//   if (Users.length == 0) {
+//     console.log("Not found biro");
+//     console.log("Request received");
+//     const Recep1 = new Recep({
+//       username: username,
+//       password: passwordHash,
+//     });
+//     console.log(Recep1);
+//     const User = Recep.find({ username });
+//     Recep1.save();
+//     res.send(Recep1);
+//   } else {
+//     res.send(true);
+//   }
+// });
 
 // app.listen(7000, function () {
 //   console.log("Server started on port 7000");
