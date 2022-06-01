@@ -1,8 +1,8 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
+// const express = require("express");
+// const bodyParser = require("body-parser");
+// const cors = require("cors");
+// const mongoose = require("mongoose");
+// const bcrypt = require("bcrypt");
 
 const app = express();
 
