@@ -69,6 +69,6 @@ app.post("/regesterr", async (req, res) => {
   }
 });
 
-app.listen(7000, function () {
-  console.log("Server started on port 7000");
-});
+// app.listen(7000, function () {
+//   console.log("Server started on port 7000");
+// });
